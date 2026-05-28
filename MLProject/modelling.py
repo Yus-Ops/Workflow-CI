@@ -16,7 +16,7 @@ from sklearn.metrics import accuracy_score, f1_score, roc_auc_score
 def main():
     data_path = os.path.join('dengue_preprocessing', 'dengue_clean.csv')
     df = pd.read_csv(data_path)
-
+    mlflow.set_tracking_uri("file:./mlruns")
     X = df.drop('Result', axis=1)
     y = df['Result']
     X_train, X_test, y_train, y_test = train_test_split(
