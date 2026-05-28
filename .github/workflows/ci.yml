@@ -8,7 +8,6 @@ on:
 jobs:
   train:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -23,7 +22,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install mlflow==2.19.0 scikit-learn==1.5.2 pandas==2.3.3 numpy==2.4.6 xgboost==3.2.0
 
-      - name: Run MLflow Project (training)
+      - name: Run training
         run: |
           cd MLProject
-          mlflow run . --env-manager local --experiment-name dengue-ci
+          python modelling.py
