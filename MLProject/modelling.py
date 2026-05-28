@@ -46,10 +46,6 @@ def main():
         mlflow.log_metric("test_f1", f1_score(y_test, y_pred))
         mlflow.log_metric("test_roc_auc", roc_auc_score(y_test, y_proba))
 
-        # Simpan model dengan input example (untuk serving Kriteria 4)
-        mlflow.sklearn.log_model(model, artifact_path="model",
-                                 input_example=X_train.iloc[:2])
-
         print(f"Accuracy: {accuracy_score(y_test, y_pred):.4f}")
         print(f"ROC-AUC : {roc_auc_score(y_test, y_proba):.4f}")
 
