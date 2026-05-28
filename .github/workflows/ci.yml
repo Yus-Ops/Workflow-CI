@@ -48,7 +48,8 @@ jobs:
           echo "Model ditemukan di: $MODEL_PATH"
           mlflow models build-docker \
             --model-uri "$MODEL_PATH" \
-            --name "${{ secrets.DOCKER_USERNAME }}/dengue-model:latest"
+            --name "${{ secrets.DOCKER_USERNAME }}/dengue-model:latest" \
+            --env-manager local
 
       - name: Push Docker image to Docker Hub
         run: docker push ${{ secrets.DOCKER_USERNAME }}/dengue-model:latest
