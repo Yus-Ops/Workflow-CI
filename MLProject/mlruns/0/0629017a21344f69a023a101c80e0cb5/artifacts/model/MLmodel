@@ -1,0 +1,45 @@
+artifact_path: model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.7
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.5.2
+mlflow_version: 2.19.0
+model_size_bytes: 514958
+model_uuid: 01dbb0bf8275419383a211d627375b92
+run_id: 0629017a21344f69a023a101c80e0cb5
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "double", "name": "Gender", "required": true}, {"type": "double",
+    "name": "Age", "required": true}, {"type": "double", "name": "Hemoglobin(g/dl)",
+    "required": true}, {"type": "double", "name": "Neutrophils(%)", "required": true},
+    {"type": "double", "name": "Lymphocytes(%)", "required": true}, {"type": "double",
+    "name": "Monocytes(%)", "required": true}, {"type": "double", "name": "Eosinophils(%)",
+    "required": true}, {"type": "double", "name": "RBC", "required": true}, {"type":
+    "double", "name": "HCT(%)", "required": true}, {"type": "double", "name": "MCV(fl)",
+    "required": true}, {"type": "double", "name": "MCH(pg)", "required": true}, {"type":
+    "double", "name": "MCHC(g/dl)", "required": true}, {"type": "double", "name":
+    "RDW-CV(%)", "required": true}, {"type": "double", "name": "Total Platelet Count(/cumm)",
+    "required": true}, {"type": "double", "name": "MPV(fl)", "required": true}, {"type":
+    "double", "name": "PDW(%)", "required": true}, {"type": "double", "name": "PCT(%)",
+    "required": true}, {"type": "double", "name": "Total WBC count(/cumm)", "required":
+    true}, {"type": "double", "name": "NLR", "required": true}, {"type": "double",
+    "name": "PLR", "required": true}, {"type": "double", "name": "MPV_PLT", "required":
+    true}, {"type": "double", "name": "WBC_PLT", "required": true}, {"type": "double",
+    "name": "NMR", "required": true}]'
+  outputs: '[{"type": "long", "required": true}]'
+  params: null
+utc_time_created: '2026-05-28 14:06:02.339992'
