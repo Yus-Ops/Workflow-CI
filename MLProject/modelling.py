@@ -19,10 +19,6 @@ def main():
     data_path = os.path.join('dengue_preprocessing', 'dengue_clean.csv')
     df = pd.read_csv(data_path)
 
-    # Tracking URI dinamis (aman lintas-OS, hindari path Windows nyasar)
-    tracking_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mlruns")
-    mlflow.set_tracking_uri("file:" + tracking_dir)
-
     # Pisahkan fitur & target
     X = df.drop('Result', axis=1)
     y = df['Result']
