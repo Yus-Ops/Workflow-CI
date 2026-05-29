@@ -22,10 +22,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install mlflow==2.19.0 scikit-learn==1.5.2 pandas==2.3.3 numpy==2.4.6 xgboost==3.2.0
 
-      - name: Run training
+      - name: Run MLflow Project
         run: |
           cd MLProject
-          python modelling.py
+          mlflow run . --env-manager local
           
       - name: Commit trained model artifacts
         run: |
