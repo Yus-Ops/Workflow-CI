@@ -1,0 +1,15 @@
+artifact_uri: file:///home/runner/work/Workflow-CI/Workflow-CI/MLProject/mlruns/0/4b9fd7a2ed7344459918e6f4a7a35584/artifacts
+end_time: 1780057541400
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4b9fd7a2ed7344459918e6f4a7a35584
+run_name: ambitious-cod-385
+run_uuid: 4b9fd7a2ed7344459918e6f4a7a35584
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780057537424
+status: 3
+tags: []
+user_id: runner
